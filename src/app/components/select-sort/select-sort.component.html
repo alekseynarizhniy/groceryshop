@@ -1,0 +1,9 @@
+<mat-form-field appearance="fill" class="select-sort">
+  <mat-label class="select-sort-label">{{ type }}</mat-label>
+  <mat-select (selectionChange)="onChange($event)">
+    <mat-option *ngIf="allValue" value="ALL">ALL</mat-option>
+    <mat-option *ngFor="let item of listMenu" value="{{ item }}">{{
+      item | firstToUppercase
+    }}</mat-option>
+  </mat-select>
+</mat-form-field>

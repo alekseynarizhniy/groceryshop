@@ -1,0 +1,71 @@
+:host {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 60px;
+
+  .about-inner {
+    width: 70%;
+    text-align: justify;
+    margin-bottom: 100px;
+
+    .about-tittle {
+      text-align: center;
+    }
+
+    .about-paragraph {
+      margin-bottom: 35px;
+
+      span {
+        margin-left: 15px;
+      }
+    }
+
+    .information {
+      display: flex;
+      flex-direction: row;
+
+      .left-side {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 50%;
+        min-width: 400px;
+        margin-bottom: 50px;
+      }
+
+      .right-side {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        width: 50%;
+        margin-bottom: 50px;
+
+        table {
+          margin-left: 15px;
+          font-size: 22px;
+          height: 50%;
+          width: 100%;
+          .table-item {
+            padding: 20px 0 20px 0;
+          }
+        }
+      }
+
+      @media screen and (max-width: 850px) {
+        display: flex;
+        flex-direction: column;
+
+        .left-side {
+          width: 100%;
+        }
+
+        .right-side {
+          width: 100%;
+          justify-content: center;
+          align-items: center;
+        }
+      }
+    }
+  }
+}

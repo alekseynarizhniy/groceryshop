@@ -1,0 +1,19 @@
+<form #form="ngForm" ngClass="form-login" (ngSubmit)="onSubmit(form)" novalidate>
+    <h3>Please write your login and password</h3>
+    <mat-form-field class="form-field" appearance="fill">
+      <input class="form-login form-item" matInput  name="login" type="text" ngModel placeholder="Login"/><br />
+    </mat-form-field>
+    <mat-form-field class="form-field" appearance="fill">
+      <input class="form-password form-item" matInput name="password" type="text" ngModel placeholder="Password" /><br />
+    </mat-form-field>
+      <button class="form-btn form-item" mat-button  class="accept-order" color="primary" hightlightShadowDirective >
+        Login
+      </button>
+    <div class="message form-item">{{ errorMessage }}</div>
+  <span  class="registration-link" (click)="onRegistrate()" hightlightShadowDirective >
+    If you don't have account you can registrate!
+  </span>
+  <button class="form-close" matSuffix mat-icon-button aria-label="Clear" (click)="onClose()">
+    <mat-icon>close</mat-icon>
+  </button>
+</form>

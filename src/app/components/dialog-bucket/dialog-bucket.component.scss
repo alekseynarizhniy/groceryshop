@@ -1,0 +1,44 @@
+:host {
+  position: relative !important;
+
+  .bucket-table {
+    width: 100%;
+    margin-bottom: 15px;
+
+    .mat-column-position {
+      border-right: 1px solid currentColor;
+      text-align: center;
+    }
+
+    .mat-column-name {
+      padding-left: 3px;
+    }
+
+    .mat-column-quantity {
+      text-align: center;
+    }
+
+    .mat-column-remove {
+      button {
+        margin: 3px 0 3px 0;
+      }
+    }
+
+    .dialog-image {
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+  .full-price {
+    color: white;
+    font-size: 20px;
+    text-shadow: 0 0 1em black, 0 0 0.2em black;
+  }
+
+  .dialog-close {
+    right: 5px;
+    position: absolute;
+    top: 5px;
+  }
+}

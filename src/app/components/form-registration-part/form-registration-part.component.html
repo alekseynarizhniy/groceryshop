@@ -1,0 +1,17 @@
+<mat-form-field [class]="'form-field form-item form-' + name" [formGroup]="parent" appearance="fill">
+  <input [name]="name" type="text" matInput [formControlName]="name" required [placeholder]="name" />
+  <div class="alert alert-danger">
+    <div *ngIf="currentControl!.invalid && (currentControl!.dirty || currentControl!.touched)" class="alert">
+        <div class="alert-error" *ngIf="currentControl!.errors?.['required']">
+          {{ currenttErrors['required']}}
+        </div>
+        <div class="alert-error" *ngIf="currentControl!.errors?.['minlength']">
+          {{ currenttErrors['minlength']}}
+        </div>
+        <div class="alert-error" *ngIf="currentControl!.errors?.['pattern'] && currentControl!.value.length > 1">
+          {{ currenttErrors['pattern']}}
+        </div>
+    </div>
+    <ng-content select=".extra-message-keeper"></ng-content>
+  </div>
+</mat-form-field>

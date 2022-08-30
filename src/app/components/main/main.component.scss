@@ -1,0 +1,21 @@
+.main {
+  width: 100%;
+  display: flex;
+
+  .left-menu {
+    display: flex;
+    background-color: #31b23e45;
+    flex-direction: column;
+    padding: 20px;
+    min-width: 190px;
+    align-items: center;
+  }
+
+  .card-list {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 20px;
+    justify-content: space-between;
+  }
+}

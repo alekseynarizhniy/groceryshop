@@ -1,0 +1,14 @@
+:host {
+  .form-item {
+    width: 100%;
+
+    input {
+      margin-right: 15px;
+    }
+
+    .alert {
+      color: red;
+      height: 25px;
+    }
+  }
+}

@@ -1,0 +1,18 @@
+<div class="dialog-product">
+  <table class="dialog-table">
+    <tr class="table-item"><td>Name: </td><td> {{ data.name }} </td></tr>
+    <tr class="table-item"><td>Type: </td><td> {{ data.type }} </td></tr>
+    <tr class="table-item"><td>Grown on: </td><td> {{ data.grownOn }} </td></tr>
+    <tr class="table-item"><td>Weight: </td><td> {{ data.weight }} </td></tr>
+    <tr class="table-item"><td>Exporter: </td><td> {{ data.country }} </td></tr>
+    <tr class="table-item"><td>Description: </td><td> {{ data.description }} </td></tr>
+    <tr class="table-item"></tr>
+    <tr class="table-item"><td>Price: </td><td> {{ data.price | currency: "€" }} </td></tr>
+  </table>
+  <div class="btn-wrapper">
+    <button class="btn-add" mat-button class="accept-order" color="primary"  (click)="addProduct($event)" appHightlightShadowDirective>Add</button>
+  </div>
+  <button class="dialog-close" matSuffix mat-icon-button aria-label="Clear" (click)="onClose()">
+    <mat-icon>close</mat-icon>
+  </button>
+</div>

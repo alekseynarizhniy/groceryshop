@@ -1,0 +1,8 @@
+<form #form="ngForm" ngClass="form-search" (ngSubmit)="onSubmit(form)" novalidate>
+  <mat-form-field class="form-field" appearance="fill">
+    <input matInput name="search" type="text" #input  ngModel placeholder="Search by name"/>
+    <button class="form-search-button" matSuffix mat-icon-button type="submit" >
+      Search
+    </button>
+  </mat-form-field>
+</form>

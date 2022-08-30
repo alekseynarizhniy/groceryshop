@@ -1,0 +1,23 @@
+<mat-card  class="card" [dialogProduct]="product">
+  <mat-card-subtitle class="card-body" >
+    <img [src]="product.filename" [alt]="product.name" />
+    <div class="card-body-inner">
+      <h2 class="card-title">{{ product.name }}</h2>
+      <p class="card-text">{{ product.description }}</p>
+      <div class="card-info">
+        <div class="card-cost">
+          <div *ngIf="product.sale; then thenBlock else elseBlock"></div>
+            <ng-template #thenBlock>
+              <h4 class="card-price crossed">{{ product.price | currency: "€" }}</h4>
+              <h4 class="card-sale">{{ product.sale | currency: "€" }}</h4>
+            </ng-template>
+            <ng-template #elseBlock>
+              <h4 class="card-price">{{ product.price | currency: "€" }}</h4>
+            </ng-template>
+        </div>
+        <input type="text" id="quantity" name="quantity" [placeholder]="product.quantity" disabled/>
+      </div>
+      <button mat-button color="primary" (click)="addProduct($event)" [disabled]="!product.quantity" hightlightShadowDirective>Add</button>
+    </div>
+  </mat-card-subtitle>
+</mat-card>

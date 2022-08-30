@@ -1,0 +1,59 @@
+:host {
+  display: flex;
+  color: white;
+  box-shadow: 0 3px 5px -1px #0003, 0 6px 10px #00000024, 0 1px 18px #0000001f;
+
+  text-shadow: 1px 1px 1px black;
+  background-color: rgb(49 178 62);
+  flex-direction: row;
+  flex-flow: row wrap;
+  align-content: space-between;
+  justify-content: space-between;
+  font-size: 26px;
+
+  .left-part,
+  .right-part {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+  }
+
+  .center-part {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    h1 {
+      font-family: "DynaPuff", cursive;
+      font-size: 36px;
+      margin: 0;
+    }
+  }
+
+  .bucket{
+    margin: 0 20px 0 20px;
+  }
+
+  .item {
+    margin: 0 20px 0 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    z-index: 999;
+    padding: 40px 5px 40px 5px;
+
+    &:hover{
+      border-radius: 0 !important;
+      background-color: rgba(255, 255, 255, 0.608);
+      color: rgb(49, 178, 62);
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+  }
+}

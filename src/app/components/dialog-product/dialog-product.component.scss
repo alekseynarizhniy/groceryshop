@@ -1,0 +1,35 @@
+:host {
+  .dialog-product {
+    position: relative;
+
+    .dialog-table {
+      margin-bottom: 30px;
+
+      .table-item td:first-child {
+        padding-right: 15px;
+      }
+    }
+
+    .dialog-close {
+      right: 10px;
+      top: 10px;
+      position: absolute;
+    }
+
+    .btn-add {
+      width: 90px;
+      height: 30px;
+      color: white;
+      border-radius: 5px;
+      background-color: #b41655;
+      margin-bottom: 20px;
+      box-shadow: none;
+
+      &:hover {
+        color: black;
+        background-color: bisque;
+        box-shadow: none;
+      }
+    }
+  }
+}

@@ -1,0 +1,29 @@
+<div class="left-part">
+  <div class="item left-item" hightlightShadowDirective>
+    <a routerLink="/main" routerLinkActive="active"> Main </a>
+  </div>
+  <div class="item left-item" hightlightShadowDirective>
+    <a routerLink="/about" routerLinkActive="active"> About us</a>
+  </div>
+</div>
+<div class="center-part">
+  <h1>GROCERYSHOP</h1><br/>
+  <span>24/7</span>
+</div>
+<div class="right-part">
+  <div class="item" *ngIf="!autorization" hightlightShadowDirective>
+    <app-registr></app-registr>
+  </div>
+  <div class="item" *ngIf="autorization" hightlightShadowDirective>
+    <app-prof></app-prof>
+  </div>
+  <div class="item" *ngIf="autorization" hightlightShadowDirective>
+    <app-sign-out></app-sign-out>
+  </div>
+  <div class="item" *ngIf="!autorization" hightlightShadowDirective>
+    <app-sign-in></app-sign-in>
+  </div>
+  <div class="bucket">
+    <app-bucket [itemBucket]="goodsArray"></app-bucket>
+  </div>
+</div>

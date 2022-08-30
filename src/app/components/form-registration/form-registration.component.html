@@ -1,0 +1,41 @@
+<form
+  ngClass="form-registration"
+  [formGroup]="registrationGroup"
+  (ngSubmit)="onSubmit()">
+  <ng-content select=".form-tittle"></ng-content>
+  <app-form-registration-part
+    [name]="'login'"
+    [parent]="registrationGroup"
+    [errors]="errorLogin"
+    (focusin)="extraMessage = ''">
+    <div class="extra-message-keeper">
+        {{ extraMessage }}
+    </div>
+  </app-form-registration-part>
+  <app-form-registration-part
+    [name]="'password'"
+    [parent]="registrationGroup"
+    [errors]="errorPassword">
+  </app-form-registration-part>
+  <app-form-registration-part
+    [name]="'name'"
+    [parent]="registrationGroup"
+    [errors]="errorName">
+  </app-form-registration-part>
+  <app-form-registration-part
+    [name]="'email'"
+    [parent]="registrationGroup"
+    [errors]="errorEmail">
+  </app-form-registration-part>
+  <app-form-registration-part
+    [name]="'phone'"
+    [parent]="registrationGroup"
+    [errors]="errorPhone">
+  </app-form-registration-part>
+  <app-form-registration-part
+    [name]="'address'"
+    [parent]="registrationGroup"
+    [errors]="errorAddress">
+  </app-form-registration-part>
+  <ng-content select=".form-btn"></ng-content>
+</form>

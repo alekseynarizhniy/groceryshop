@@ -1,0 +1,37 @@
+<div class="main">
+  <div class="left-menu">
+    <h2>Sorting settings</h2>
+    <app-search (newItemEvent)="filterElement('Name', $event)">
+    </app-search>
+    <app-sort
+      [listMenu]="countries"
+      [type]="country"
+      [allValue] = "true"
+      (newItemEvent)="filterElement(country, $event)">
+    </app-sort>
+    <app-sort
+      [listMenu]="types"
+      [type]="typeProduct"
+      [allValue] = "true"
+      (newItemEvent)="filterElement(typeProduct, $event)">
+    </app-sort>
+    <app-sort
+    [listMenu]="sortProduct"
+    [type]="sort"
+    [allValue] = "false"
+    (newItemEvent)="sortElement($event)">
+  </app-sort>
+  <section class="example-section">
+    <mat-checkbox class="example-margin" (change)="checkSales($event)" >Sales products</mat-checkbox>
+  </section>
+  </div>
+  <div class="card-list" *ngIf="goods.length">
+    <app-card *ngFor="let item of showGoods" [product]="item"></app-card>
+    <mat-paginator #paginator
+      [length]="filteredGoods.length"
+      [pageSize]="pageSize"
+      [pageSizeOptions]="[5, 10, 50, 100]"
+      (page)="changePage($event)">
+    </mat-paginator>
+  </div>
+</div>

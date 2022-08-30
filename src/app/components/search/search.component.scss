@@ -1,0 +1,12 @@
+:host{
+  max-width: 201px;
+
+  .mat-form-field {
+    max-width: 201px;
+
+    .form-search-button{
+      color: rgba(0,0,0,.6);
+    }
+  }
+
+}

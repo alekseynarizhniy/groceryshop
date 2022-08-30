@@ -1,0 +1,4 @@
+<div class="bucket" (click)="onClick($event)">
+  <img [src]="bucket" alt="bucket">
+  <span class="bucket-quntity" *ngIf="this.itemBucket.length">{{ itemBucket.length }}</span>
+</div>
