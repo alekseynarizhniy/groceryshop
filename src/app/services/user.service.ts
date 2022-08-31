@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Observable, BehaviorSubject, SubscriptionLike } from 'rxjs';
+import { Observable, BehaviorSubject, SubscriptionLike, map } from 'rxjs';
 
 import { DataService } from './data.service';
 
@@ -21,41 +21,38 @@ export class UserService {
     address: '',
   });
 
-  constructor(private data: DataService) {}
+  constructor(private data: DataService) { }
 
   public getUsersFromServer(): Observable<User[]> {
     return this.data.getData(EXTRA_URL_USERS);
   }
 
   public checkUser(login: string, password: string): Observable<boolean> {
-    return new Observable((subscriber) => {
-      this.getUsersFromServer().subscribe((users) => {
-        let user = users.find(
-          (element) => element.login === login && element.password === password
-        );
+    return this.getUsersFromServer().pipe(map(resolve => {
+      let user = resolve.find(
+        (element) => element.login === login && element.password === password
+      );
 
-        if (user) {
-          subscriber.next(true);
-          this.addUser(user);
-        } else {
-          subscriber.next(false);
-        }
-      });
-    });
+      if (user) {
+        this.addUser(user);
+        return true;
+      } else {
+        return false;
+      }
+    }));
   }
 
   public checkLogin(login: string): Observable<boolean> {
-    return new Observable((subscriber) => {
-      this.getUsersFromServer().subscribe((users) => {
-        const logins: string[] = [];
-        users.forEach((user: User) => logins.push(user.login));
-        if (logins.includes(login)) {
-          subscriber.next(true);
-        } else {
-          subscriber.next(false);
-        }
-      });
-    });
+    return this.getUsersFromServer().pipe(map(resolve => {
+      const logins: string[] = [];
+      resolve.forEach((user: User) => logins.push(user.login));
+
+      if (logins.includes(login)) {
+        return true;
+      } else {
+        return false;
+      }
+    }));
   }
 
   public addUser(user: User): void {

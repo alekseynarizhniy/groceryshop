@@ -1,8 +1,11 @@
-<app-form-registration >
-  <h3 class="form-tittle">You can change any field your prifile exept login.</h3>
-  <button class="form-btn" mat-button type="submit" color="primary">Update data profile</button>
-</app-form-registration>
-<button class="dialog-close" matSuffix mat-icon-button aria-label="Clear" (click)="onClose()">
-  <mat-icon>close</mat-icon>
-</button>
-
+<mat-dialog-content>
+  <app-form-registration >
+    <h3 class="form-tittle">You can change any field your prifile exept login.</h3>
+    <button class="form-btn" mat-button type="submit" color="primary">Update data profile</button>
+  </app-form-registration>
+</mat-dialog-content>
+<div mat-dialog-actions>
+  <button class="dialog-close" matSuffix mat-icon-button aria-label="Clear" (click)="onClose()">
+    <mat-icon>close</mat-icon>
+  </button>
+</div>

@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Output } from '@angular/core';
-import {  FormControl, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 import { User } from '../../interfaces/users';
 
@@ -10,6 +10,9 @@ import {
   REGEX_NAME,
   REGEX_PASSWORD,
   REGEX_PHONE,
+  MIN_SIZE,
+  ERROR_VALIDATION,
+  INPUT_NAMES
 } from '../../constants/values';
 
 @Component({
@@ -18,50 +21,28 @@ import {
   styleUrls: ['./form-registration.component.scss'],
 })
 export class FormRegistrationComponent {
-  private minSize: number = 4;
-  public errorLogin = {name: 'Login', size: '4'};
-  public errorPassword = {name: 'Password', size: '6'};
-  public errorName = {name: 'Name', size: '4', get pattern () {  return "Only alphabetsallowed."} };
-  public errorEmail= {name: 'Email', get pattern () {  return "Incorrect email."} };
-  public errorPhone = {name: 'Phone', get pattern () {  return "Incorrect phone."} };
-  public errorAddress = {name: 'Address', size: '4', get minlength () {  return "Address to short."}};
+  public minSize = MIN_SIZE;
+  public inputNames = INPUT_NAMES;
+  public erorrValidation = ERROR_VALIDATION;
 
-  private userNameControl = new FormControl('', [
-    Validators.required,
-    Validators.minLength(this.minSize),
-    Validators.pattern(REGEX_NAME),
-  ]);
-  private loginControl = new FormControl('', [
-    Validators.required,
-    Validators.minLength(this.minSize),
-    Validators.pattern(REGEX_PASSWORD),
-  ]);
-  private passwordControl = new FormControl('', [
-    Validators.required,
-    Validators.minLength(this.minSize),
-    Validators.pattern(REGEX_LOGIN),
-  ]);
-  private emailControl = new FormControl('', [
-    Validators.required,
-    Validators.pattern(REGEX_EMAIL),
-  ]);
-  private phoneControl = new FormControl('',);
-  private addressControl = new FormControl('', [
-    Validators.required,
-    Validators.minLength(this.minSize),
-  ]);
-  public registrationGroup = new FormGroup({
-    name: this.userNameControl,
-    login: this.loginControl,
-    password: this.passwordControl,
-    email: this.emailControl,
-    phone: this.phoneControl,
-    address: this.addressControl,
+  public registrationGroup: FormGroup = this.fb.group({
+    name: ['', [Validators.required, Validators.minLength(this.minSize), Validators.pattern(REGEX_NAME)]],
+    login: ['', [Validators.required, Validators.minLength(this.minSize), Validators.pattern(REGEX_PASSWORD)]],
+    password: ['', [Validators.required, Validators.minLength(this.minSize), Validators.pattern(REGEX_LOGIN)]],
+    email: ['', [Validators.required, Validators.pattern(REGEX_EMAIL)]],
+    phone: ['', [Validators.pattern(REGEX_PHONE)]],
+    address: ['', [Validators.required, Validators.minLength(this.minSize)]]
   });
 
   public extraMessage: string = '';
 
+  constructor(private fb: FormBuilder) { }
+
   @Output() newItemEvent = new EventEmitter<User>();
+
+  public originOrder(): number {
+    return 0;
+  }
 
   public onSubmit(): void {
 

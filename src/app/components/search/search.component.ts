@@ -9,8 +9,8 @@ import { NgForm } from '@angular/forms';
 export class SearchComponent {
   @Output() newItemEvent = new EventEmitter<string>();
 
-  onSubmit(element: NgForm): void {
-    const value:string = element.value.search;
+  onSubmit(event: NgForm): void {
+    const value:string = event.value.search;
     this.newItemEvent.emit(value);
   }
 }

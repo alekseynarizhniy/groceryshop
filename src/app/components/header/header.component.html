@@ -11,19 +11,19 @@
   <span>24/7</span>
 </div>
 <div class="right-part">
-  <div class="item" *ngIf="!autorization" hightlightShadowDirective>
+  <div class="item" *ngIf="!(autorizationStatus | async)" hightlightShadowDirective>
     <app-registr></app-registr>
   </div>
-  <div class="item" *ngIf="autorization" hightlightShadowDirective>
+  <div class="item" *ngIf="(autorizationStatus | async)" hightlightShadowDirective>
     <app-prof></app-prof>
   </div>
-  <div class="item" *ngIf="autorization" hightlightShadowDirective>
+  <div class="item" *ngIf="(autorizationStatus | async)" hightlightShadowDirective>
     <app-sign-out></app-sign-out>
   </div>
-  <div class="item" *ngIf="!autorization" hightlightShadowDirective>
+  <div class="item" *ngIf="!(autorizationStatus | async)" hightlightShadowDirective>
     <app-sign-in></app-sign-in>
   </div>
   <div class="bucket">
-    <app-bucket [itemBucket]="goodsArray"></app-bucket>
+    <app-bucket></app-bucket>
   </div>
 </div>

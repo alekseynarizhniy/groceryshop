@@ -7,14 +7,11 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
 })
 export class SelectSortComponent {
   @Input() listMenu: string[] = [];
-
   @Input() type: string = '';
-
   @Input() allValue:Boolean = false;
-
   @Output() newItemEvent = new EventEmitter<string>();
 
-  onChange(element: any): void {
-    this.newItemEvent.emit(element.value);
+  onChange(event: any): void {
+    this.newItemEvent.emit(event.value);
   }
 }

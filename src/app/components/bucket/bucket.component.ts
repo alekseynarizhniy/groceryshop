@@ -1,6 +1,6 @@
-import { Component, Input, OnDestroy, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
-import { SubscriptionLike } from 'rxjs';
+import { Subscription } from 'rxjs';
 
 import { UserService } from 'src/app/services/user.service';
 
@@ -11,6 +11,7 @@ import { ProductWrapper } from 'src/app/classes/product';
 
 import { IMG_BUCKET } from '../../constants/links';
 import { DIALOG_WIDTH } from '../../constants/values';
+import { Store } from '@ngrx/store';
 
 @Component({
   selector: 'app-bucket',
@@ -20,22 +21,31 @@ import { DIALOG_WIDTH } from '../../constants/values';
 export class BucketComponent implements OnInit, OnDestroy {
   public bucket = IMG_BUCKET;
   public autorization: Boolean = false;
-  private subscription!: SubscriptionLike;
+  private subscriptions: Subscription[] = [];
+  public itemBucket: ProductWrapper[] = [];
 
-  @Input() itemBucket: ProductWrapper[] = [];
-
-  constructor(private dialog: MatDialog, private useAuthorization: UserService) {}
+  constructor(private dialog: MatDialog, private useAuthorization: UserService, private store: Store<any>) { }
 
   ngOnInit(): void {
-    this.subscription = this.useAuthorization
+    const useAuthorization = this.useAuthorization
       .getAutorizationStatus()
       .subscribe((autorizationStaus: Boolean) => {
         this.autorization = autorizationStaus;
       });
+
+    this.subscriptions.push(useAuthorization);
+
+    const storeSubscription = this.store
+      .select('addGoods')
+      .subscribe((goods: ProductWrapper[]) => {
+        this.itemBucket = goods;
+      });
+
+    this.subscriptions.push(storeSubscription);
   }
 
   ngOnDestroy(): void {
-    this.subscription.unsubscribe();
+    this.subscriptions.forEach((subscription) => subscription.unsubscribe());
   }
 
   public onClick(event: any): void {

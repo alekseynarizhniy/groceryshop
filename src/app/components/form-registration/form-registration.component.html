@@ -3,39 +3,13 @@
   [formGroup]="registrationGroup"
   (ngSubmit)="onSubmit()">
   <ng-content select=".form-tittle"></ng-content>
-  <app-form-registration-part
-    [name]="'login'"
+  <app-form-registration-part *ngFor="let item of inputNames | keyvalue: originOrder"
+    [name]="item.value"
     [parent]="registrationGroup"
-    [errors]="errorLogin"
-    (focusin)="extraMessage = ''">
-    <div class="extra-message-keeper">
-        {{ extraMessage }}
-    </div>
+    [errors]="erorrValidation[item.value]">
   </app-form-registration-part>
-  <app-form-registration-part
-    [name]="'password'"
-    [parent]="registrationGroup"
-    [errors]="errorPassword">
-  </app-form-registration-part>
-  <app-form-registration-part
-    [name]="'name'"
-    [parent]="registrationGroup"
-    [errors]="errorName">
-  </app-form-registration-part>
-  <app-form-registration-part
-    [name]="'email'"
-    [parent]="registrationGroup"
-    [errors]="errorEmail">
-  </app-form-registration-part>
-  <app-form-registration-part
-    [name]="'phone'"
-    [parent]="registrationGroup"
-    [errors]="errorPhone">
-  </app-form-registration-part>
-  <app-form-registration-part
-    [name]="'address'"
-    [parent]="registrationGroup"
-    [errors]="errorAddress">
-  </app-form-registration-part>
+  <div class="extra-message-keeper">
+    {{ extraMessage }}
+  </div>
   <ng-content select=".form-btn"></ng-content>
 </form>

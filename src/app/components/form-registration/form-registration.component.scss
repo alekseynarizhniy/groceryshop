@@ -10,17 +10,10 @@
     }
 
     .extra-message-keeper {
-      position: relative;
-
-      .extra-message {
-        position: absolute;
-        top: -45px;
-        left: 10px;
-        height: 15px;
+        padding-top: 5px 0 5px 0;
+        font-weight: bold;
         font-size: 16px;
         color: red;
-        margin-bottom: 3px;
-      }
     }
   }
 }

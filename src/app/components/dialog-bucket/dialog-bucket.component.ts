@@ -3,7 +3,6 @@ import { MatDialog, MatDialogRef } from '@angular/material/dialog';
 import { Store } from '@ngrx/store';
 import { Subscription } from 'rxjs';
 import { DIALOG_WIDTH } from 'src/app/constants/values';
-import { User } from 'src/app/interfaces/users';
 import { DataService } from 'src/app/services/data.service';
 
 import { GoodsService } from 'src/app/services/goods.service';
@@ -82,7 +81,7 @@ export class DialogBucketComponent implements OnInit, OnDestroy {
       });
 
       let currentUser = this.userService.getUser().subscribe((user) => {
-        let order = {name: user.name, phone: user.phone, address: user.address, email: user.email,order: this.bucketGoods};
+        const order = {name: user.name, phone: user.phone, address: user.address, email: user.email,order: this.bucketGoods};
         let sendData = this.dataService.addData('orders', order).subscribe(() => sendData.unsubscribe());
       });
 

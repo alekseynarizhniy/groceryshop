@@ -1,6 +1,6 @@
 import { Component, OnDestroy, OnInit, ViewChild } from '@angular/core';
 import { MatPaginator } from '@angular/material/paginator';
-import { SubscriptionLike } from 'rxjs';
+import { SubscriptionLike, map } from 'rxjs';
 
 import { FilterProductService } from 'src/app/services/filter-product.service';
 import { GoodsService } from 'src/app/services/goods.service';
@@ -35,31 +35,36 @@ export class MainComponent implements OnInit, OnDestroy {
     private productFilter: FilterProductService,
     private productSort: SortProductService,
     private goodsService: GoodsService
-  ) {}
+  ) { }
 
 
   ngOnInit(): void {
-    this.subscription = this.goodsService.getGoods().subscribe(products => {
-      let setCountries = new Set<string>();
-      let setTypes = new Set<string>();
-      this.goods = [];
+    this.subscription = this.goodsService.getGoods().pipe(
+      map(resolve => {
+        let setCountries = new Set<string>();
+        let setTypes = new Set<string>();
+        let goods: ProductWrapper[] = [];
 
-      products.forEach((product) => {
-        setCountries.add(product.country);
-        setTypes.add(product.type);
-        this.goods.push(new ProductWrapper(product));
-      });
+        resolve.forEach((product) => {
+          setCountries.add(product.country);
+          setTypes.add(product.type);
+          goods.push(new ProductWrapper(product));
+        });
 
-      this.countries = Array.from(setCountries);
-      this.types = Array.from(setTypes);
+        return { goods: goods, countries: Array.from(setCountries), types: Array.from(setTypes) };
+      })
 
-      this.productFilter.addGoods(this.goods);
+    ).subscribe(object => {
+      this.types = object.types;
+      this.countries = object.countries;
+      this.goods = object.goods
 
-      this.productFilter.filteredGoods().subscribe( goods => {
-            this.filteredGoods = goods;
-            this.goodsLength = this.filteredGoods.length;
-            this.showGoods = this.filteredGoods.slice(0, this.pageSize);
-            if(this.paginator) this.paginator.firstPage();
+      this.productFilter.addGoods(object.goods);
+      this.productFilter.filteredGoods().subscribe(goods => {
+        this.filteredGoods = goods;
+        this.goodsLength = this.filteredGoods.length;
+        this.showGoods = this.filteredGoods.slice(0, this.pageSize);
+        if (this.paginator) this.paginator.firstPage();
       });
 
     });

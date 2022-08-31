@@ -16,10 +16,10 @@
       (newItemEvent)="filterElement(typeProduct, $event)">
     </app-sort>
     <app-sort
-    [listMenu]="sortProduct"
-    [type]="sort"
-    [allValue] = "false"
-    (newItemEvent)="sortElement($event)">
+      [listMenu]="sortProduct"
+      [type]="sort"
+      [allValue] = "false"
+      (newItemEvent)="sortElement($event)">
   </app-sort>
   <section class="example-section">
     <mat-checkbox class="example-margin" (change)="checkSales($event)" >Sales products</mat-checkbox>

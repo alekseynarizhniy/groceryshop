@@ -1,8 +1,5 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
-import { SubscriptionLike } from 'rxjs';
-
-import { UserService } from 'src/app/services/user.service';
 
 import { DialogSignInComponent } from '../dialog-sign-in/dialog-sign-in.component';
 

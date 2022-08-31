@@ -27,7 +27,7 @@
       "id": 3,
       "name": "Legums",
       "type": "vegetable",
-      "quantity": 8,
+      "quantity": 7,
       "weight": 1,
       "price": 17.11,
       "description": "Raw legums on the wooden table",
@@ -38,7 +38,7 @@
       "id": 4,
       "name": "Hazelnut",
       "type": "vegetable",
-      "quantity": 7,
+      "quantity": 5,
       "weight": 1,
       "price": 27.35,
       "sale": 19.64,
@@ -50,7 +50,7 @@
       "id": 5,
       "name": "Lemon",
       "type": "fruit",
-      "quantity": 7,
+      "quantity": 5,
       "weight": 1,
       "price": 15.79,
       "description": "Rosemary, lemon and salt on the table",
@@ -186,27 +186,24 @@
       "phone": "1234567890",
       "address": "ffff 22, FF",
       "id": 3
+    },
+    {
+      "name": "Nick",
+      "login": "ffff2",
+      "password": "ffff2",
+      "email": "fffff@fgf.ff",
+      "phone": "1234567890",
+      "address": "ffff 22, FF",
+      "id": 4
     }
   ],
   "orders": [
     {
-      "name": "John",
+      "name": "ffff",
       "phone": "1234567890",
       "address": "ffff 22, FF",
       "email": "fffff@fgf.ff",
       "order": [
-        {
-          "name": "Lemon",
-          "type": "fruit",
-          "grownOn": "berry",
-          "quantity": 1,
-          "weight": 1,
-          "price": 15.79,
-          "description": "Rosemary, lemon and salt on the table",
-          "country": "Norway",
-          "filename": "https://st.depositphotos.com/1020804/2370/i/950/depositphotos_23707225-stock-photo-lemons-with-leaves.jpg",
-          "id": 5
-        },
         {
           "name": "Hazelnut",
           "type": "vegetable",
@@ -219,9 +216,54 @@
           "country": "Germany",
           "filename": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTn8Awn3HIFMgrntGhgUq6p7VGUZSE_9Cy9PXqRq4WUWZ0h8Xyd6DrUbgB1uLqh1OmkJUs&usqp=CAU",
           "id": 4
+        },
+        {
+          "name": "Lemon",
+          "type": "fruit",
+          "grownOn": "berry",
+          "quantity": 1,
+          "weight": 1,
+          "price": 15.79,
+          "description": "Rosemary, lemon and salt on the table",
+          "country": "Norway",
+          "filename": "https://st.depositphotos.com/1020804/2370/i/950/depositphotos_23707225-stock-photo-lemons-with-leaves.jpg",
+          "id": 5
         }
       ],
       "id": 1
+    },
+    {
+      "name": "Nick",
+      "phone": "1234567890",
+      "address": "ffff 22, FF",
+      "email": "fffff@fgf.ff",
+      "order": [
+        {
+          "name": "Legums",
+          "type": "vegetable",
+          "grownOn": "berry",
+          "quantity": 1,
+          "weight": 1,
+          "price": 17.11,
+          "description": "Raw legums on the wooden table",
+          "country": "Poland",
+          "filename": "https://www.collinsdictionary.com/images/full/legume_25126336.jpg",
+          "id": 3
+        },
+        {
+          "name": "Lemon",
+          "type": "fruit",
+          "grownOn": "berry",
+          "quantity": 1,
+          "weight": 1,
+          "price": 15.79,
+          "description": "Rosemary, lemon and salt on the table",
+          "country": "Norway",
+          "filename": "https://st.depositphotos.com/1020804/2370/i/950/depositphotos_23707225-stock-photo-lemons-with-leaves.jpg",
+          "id": 5
+        }
+      ],
+      "id": 2
     }
   ]
 }
