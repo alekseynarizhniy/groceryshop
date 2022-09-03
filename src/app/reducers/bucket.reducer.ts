@@ -1,7 +1,7 @@
 import { ProductWrapper } from '../classes/product';
 import { BucketAction } from '../interfaces/bucket-action';
 
-export function reducer(state: ProductWrapper[] = [], action: BucketAction): ProductWrapper[] {
+export function bucket(state: ProductWrapper[] = [], action: BucketAction): ProductWrapper[] {
   let arr: any[] = [];
   arr = state.slice();
 

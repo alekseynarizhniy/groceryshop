@@ -7,9 +7,9 @@
     [name]="item.value"
     [parent]="registrationGroup"
     [errors]="erorrValidation[item.value]">
+    <div class="extra-message-keeper" *ngIf="item.value === 'login'">
+      {{ extraMessage }}
+    </div>
   </app-form-registration-part>
-  <div class="extra-message-keeper">
-    {{ extraMessage }}
-  </div>
   <ng-content select=".form-btn"></ng-content>
 </form>

@@ -2,9 +2,19 @@
   position: relative;
 
 
-  .dialog-close {
-    right: 5px;
-    top: 5px;
-    position: absolute;
-  }
+  .mat-dialog-actions {
+    padding: 0;
+    min-height: 0;
+   }
+
+   .mat-dialog-content {
+     max-height: 600px;
+     padding-bottom: 15px;
+   }
+
+   .dialog-close {
+     right: 5px;
+     top: 5px;
+     position: absolute;
+   }
 }

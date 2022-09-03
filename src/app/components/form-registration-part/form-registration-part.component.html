@@ -12,6 +12,8 @@
           {{ currenttErrors['pattern']}}
         </div>
     </div>
-    <ng-content select=".extra-message-keeper"></ng-content>
+    <div *ngIf="currentControl?.valid" class="alert">
+      <ng-content select=".extra-message-keeper"></ng-content>
+    </div>
   </div>
 </mat-form-field>

@@ -26,7 +26,6 @@ import { DialogSignInComponent } from './dialog-sign-in/dialog-sign-in.component
 import { DialogBucketComponent } from './dialog-bucket/dialog-bucket.component';
 import { DialogProductComponent } from './dialog-product/dialog-product.component';
 import { FormRegistrationComponent } from './form-registration/form-registration.component';
-import { AboutComponent } from './about/about.component';
 import { SignOutComponent } from './sign-out/sign-out.component';
 import { SearchComponent } from './search/search.component';
 import { FooterComponent } from './footer/footer.component';
@@ -40,7 +39,7 @@ import { FormRegistrationPartComponent } from './form-registration-part/form-reg
 import { CurrencyPipe } from '../pipes/currency.pipe';
 import { FirstToUppercase } from '../pipes/first-to-uppercase.pipe';
 
-import { reducer } from '../reducers/bucket.reducer';
+import { bucket } from '../reducers/bucket.reducer';
 
 import { HightlightShadowDirective } from '../directives/hightlightshadow.directive';
 import { DialogProductDirective } from '../directives/dialog-product.directive';
@@ -51,7 +50,7 @@ import { UserService } from '../services/user.service';
 
 const routes: Routes = [
   { path: 'main', component: MainComponent },
-  { path: 'about', component: AboutComponent },
+  { path: 'about', loadChildren: () => import('./about/about.module').then(m => m.AboutModule)},
   { path: '**', component: MainComponent },
 ];
 
@@ -71,7 +70,6 @@ const routes: Routes = [
     SignInComponent,
     DialogSignInComponent,
     FormRegistrationComponent,
-    AboutComponent,
     SignOutComponent,
     SearchComponent,
     SuccessOrderComponent,
@@ -98,7 +96,7 @@ const routes: Routes = [
     MatMenuModule,
     MatIconModule,
     ReactiveFormsModule,
-    StoreModule.forRoot<any, any>({ addGoods: reducer }),
+    StoreModule.forRoot<any, any>({ addGoods: bucket }),
     RouterModule.forRoot(routes),
   ],
   exports: [RouterModule, HeaderComponent, FooterComponent],
