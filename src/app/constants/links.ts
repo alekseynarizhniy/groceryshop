@@ -13,5 +13,5 @@ export const HTTP_OPTINDS = {
   headers: HEADER,
 };
 
-export const IMG_BUCKET: string = '../../../assets/images/bucket.png';
-export const IMG_CLOSE: string = '../../../assets/images/cross-icon.svg';
+export const IMG_BUCKET: string = 'assets/images/bucket.png';
+export const IMG_CLOSE: string = 'assets/images/cross-icon.svg';
