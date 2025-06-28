@@ -1,6 +1,8 @@
 import { HttpHeaders } from '@angular/common/http';
 
-export const URL: string = 'http://localhost:3000/';
+//export const URL: string = 'http://localhost:3000/';
+export const URL: string = 'https://groceryshop-2pco.onrender.com/';
+
 export const EXTRA_URL_GOODS: string = 'goods';
 export const EXTRA_URL_USERS: string = 'users';
 
