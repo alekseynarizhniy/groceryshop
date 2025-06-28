@@ -1,0 +1,269 @@
+{
+  "goods": [
+    {
+      "id": 1,
+      "name": "Strawberry",
+      "type": "fruit",
+      "quantity": 7,
+      "weight": 1,
+      "price": 29.45,
+      "description": "Sweet fresh strawberry on the wooden table",
+      "filename": "https://s30386.pcdn.co/wp-content/uploads/2019/08/Strawberries_HNL1306_ts104880701.jpg.webp",
+      "country": "Norway"
+    },
+    {
+      "id": 2,
+      "name": "Asparagus",
+      "type": "vegetable",
+      "quantity": 0,
+      "weight": 1,
+      "price": 18.95,
+      "sale": 16.44,
+      "description": "Asparagus with ham on the wooden table",
+      "filename": "https://img2.zakaz.ua/upload.version_1.0.20919c36cae9c9069a281f4da0701260.1350x1350.jpeg",
+      "country": "Poland"
+    },
+    {
+      "id": 3,
+      "name": "Legums",
+      "type": "vegetable",
+      "quantity": 7,
+      "weight": 1,
+      "price": 17.11,
+      "description": "Raw legums on the wooden table",
+      "filename": "https://www.collinsdictionary.com/images/full/legume_25126336.jpg",
+      "country": "Poland"
+    },
+    {
+      "id": 4,
+      "name": "Hazelnut",
+      "type": "vegetable",
+      "quantity": 5,
+      "weight": 1,
+      "price": 27.35,
+      "sale": 19.64,
+      "description": "Hazelnut in black ceramic bowl on old wooden background. forest wealth. rustic style. selective focus",
+      "filename": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTn8Awn3HIFMgrntGhgUq6p7VGUZSE_9Cy9PXqRq4WUWZ0h8Xyd6DrUbgB1uLqh1OmkJUs&usqp=CAU",
+      "country": "Germany"
+    },
+    {
+      "id": 5,
+      "name": "Lemon",
+      "type": "fruit",
+      "quantity": 5,
+      "weight": 1,
+      "price": 15.79,
+      "description": "Rosemary, lemon and salt on the table",
+      "filename": "https://st.depositphotos.com/1020804/2370/i/950/depositphotos_23707225-stock-photo-lemons-with-leaves.jpg",
+      "country": "Norway"
+    },
+    {
+      "id": 6,
+      "name": "Tomato",
+      "type": "vegetable",
+      "quantity": 11,
+      "weight": 1,
+      "price": 16.3,
+      "description": "Fresh tomato juice with basil",
+      "filename": "https://dictionary.cambridge.org/ru/images/thumb/tomato_noun_001_17860.jpg?version=5.0.247",
+      "country": "Poland"
+    },
+    {
+      "id": 7,
+      "name": "Green beans",
+      "type": "vegetable",
+      "quantity": 8,
+      "weight": 1,
+      "price": 28.79,
+      "sale": 26.11,
+      "description": "Raw organic green beans ready to eat",
+      "filename": "https://solidstarts.com/wp-content/uploads/Green-Bean-480x320.jpg",
+      "country": "Poland"
+    },
+    {
+      "id": 8,
+      "name": "Pear",
+      "type": "fruit",
+      "quantity": 11,
+      "weight": 1,
+      "price": 15.12,
+      "description": "Sweet fresh pears on the wooden table",
+      "filename": "https://images.heb.com/is/image/HEBGrocery/000513694",
+      "country": "Norway"
+    },
+    {
+      "id": 9,
+      "name": "Orange",
+      "type": "fruit",
+      "quantity": 9,
+      "weight": 1,
+      "price": 21.48,
+      "description": "Orange popsicle ice cream bars made from fresh oranges.  a refreshing summer treat.",
+      "filename": "https://images.heb.com/is/image/HEBGrocery/000375169",
+      "country": "Brazil"
+    },
+    {
+      "id": 10,
+      "name": "Cherry",
+      "type": "fruit",
+      "quantity": 10,
+      "weight": 1,
+      "price": 14.35,
+      "description": "Cherry with sugar on old table",
+      "filename": "https://tradevalley.com/media/sellers/335/products/cherry.jpg",
+      "country": "Litva"
+    },
+    {
+      "id": 11,
+      "name": "Corn",
+      "type": "vegetable",
+      "quantity": 12,
+      "weight": 1,
+      "price": 13.55,
+      "sale": 12.99,
+      "description": "Grilled corn on the cob with salt and butter",
+      "filename": "https://s30386.pcdn.co/wp-content/uploads/2019/08/FreshCorn_HNL1309_ts135846041.jpg.optimal.jpg",
+      "country": "USA"
+    },
+    {
+      "id": 12,
+      "name": "Blueberries",
+      "type": "fruit",
+      "quantity": 12,
+      "weight": 1,
+      "price": 21.01,
+      "description": "Healthy breakfast. berry crumble with fresh blueberries, raspberries, strawberries, almond, walnuts, pecans, yogurt, and mint in ceramic plates over white wooden surface, top view",
+      "filename": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYsusJjBZN9szsmQ_bE7z61_VzacdM-iqy3PnH_47-MFPIJRfPFjWBEfZ01Bd2FEancEU&usqp=CAU",
+      "country": "Norway"
+    },
+    {
+      "id": 13,
+      "name": "Plum",
+      "type": "fruit",
+      "quantity": 12,
+      "weight": 1,
+      "price": 19.18,
+      "description": "Yellow and red sweet plums",
+      "filename": "https://images.heb.com/is/image/HEBGrocery/000375254?fit=constrain,1&wid=800&hei=800&fmt=jpg&qlt=85,0&resMode=sharp2&op_usm=1.75,0.3,2,0",
+      "country": "Norway"
+    },
+    {
+      "id": 14,
+      "name": "Basil",
+      "type": "vegetable",
+      "quantity": 12,
+      "weight": 1,
+      "price": 15.19,
+      "description": "Concept of vegan food with basil",
+      "filename": "http://www.fresh-square.com/wp-content/uploads/2016/10/bigstock-fresh-basil-leaves-in-closeup-50880056.jpg",
+      "country": "Italy"
+    }
+  ],
+  "users": [
+    {
+      "name": "vasia",
+      "login": "brbr",
+      "password": "brbr",
+      "email": "brbr@i.ua",
+      "phone": "1234567890",
+      "address": "str. brbr, 45",
+      "id": 1
+    },
+    {
+      "name": "dasia",
+      "login": "obrobr",
+      "password": "obrobr",
+      "email": "obrobr@i.ua",
+      "phone": "1234567890",
+      "address": "str. obrobr, 75",
+      "id": 2
+    },
+    {
+      "name": "John",
+      "login": "ffff",
+      "password": "ffff123",
+      "email": "fffff@fgf.ff",
+      "phone": "1234567890",
+      "address": "ffff 22, FF",
+      "id": 3
+    },
+    {
+      "name": "Nick",
+      "login": "ffff2",
+      "password": "ffff2",
+      "email": "fffff@fgf.ff",
+      "phone": "1234567890",
+      "address": "ffff 22, FF",
+      "id": 4
+    }
+  ],
+  "orders": [
+    {
+      "name": "ffff",
+      "phone": "1234567890",
+      "address": "ffff 22, FF",
+      "email": "fffff@fgf.ff",
+      "order": [
+        {
+          "name": "Hazelnut",
+          "type": "vegetable",
+          "grownOn": "berry",
+          "quantity": 1,
+          "weight": 1,
+          "price": 27.35,
+          "sale": 19.64,
+          "description": "Hazelnut in black ceramic bowl on old wooden background. forest wealth. rustic style. selective focus",
+          "country": "Germany",
+          "filename": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTn8Awn3HIFMgrntGhgUq6p7VGUZSE_9Cy9PXqRq4WUWZ0h8Xyd6DrUbgB1uLqh1OmkJUs&usqp=CAU",
+          "id": 4
+        },
+        {
+          "name": "Lemon",
+          "type": "fruit",
+          "grownOn": "berry",
+          "quantity": 1,
+          "weight": 1,
+          "price": 15.79,
+          "description": "Rosemary, lemon and salt on the table",
+          "country": "Norway",
+          "filename": "https://st.depositphotos.com/1020804/2370/i/950/depositphotos_23707225-stock-photo-lemons-with-leaves.jpg",
+          "id": 5
+        }
+      ],
+      "id": 1
+    },
+    {
+      "name": "Nick",
+      "phone": "1234567890",
+      "address": "ffff 22, FF",
+      "email": "fffff@fgf.ff",
+      "order": [
+        {
+          "name": "Legums",
+          "type": "vegetable",
+          "grownOn": "berry",
+          "quantity": 1,
+          "weight": 1,
+          "price": 17.11,
+          "description": "Raw legums on the wooden table",
+          "country": "Poland",
+          "filename": "https://www.collinsdictionary.com/images/full/legume_25126336.jpg",
+          "id": 3
+        },
+        {
+          "name": "Lemon",
+          "type": "fruit",
+          "grownOn": "berry",
+          "quantity": 1,
+          "weight": 1,
+          "price": 15.79,
+          "description": "Rosemary, lemon and salt on the table",
+          "country": "Norway",
+          "filename": "https://st.depositphotos.com/1020804/2370/i/950/depositphotos_23707225-stock-photo-lemons-with-leaves.jpg",
+          "id": 5
+        }
+      ],
+      "id": 2
+    }
+  ]
+}
